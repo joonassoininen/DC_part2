@@ -9,4 +9,8 @@ services:
       - 8080:8080
     environment:
       - REQUEST_ORIGIN=http://localhost:5001
+      - REDIS_HOST=redis
+    restart: unless-stopped
+  redis:
+    image: redis
 
