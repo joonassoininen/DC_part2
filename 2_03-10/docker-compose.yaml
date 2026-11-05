@@ -27,5 +27,12 @@ services:
   redis:
     image: redis
 
+  nginx:
+    image: nginx
+    ports:
+      - 8000:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
 
 
