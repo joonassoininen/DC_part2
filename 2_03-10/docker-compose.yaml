@@ -21,6 +21,8 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./database:/var/lib/postgresql
 
   redis:
     image: redis
