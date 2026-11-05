@@ -1,14 +1,10 @@
 services:
   frontend:
-    build:
-      context: ../example-app/frontend
-      args:
-        REACT_APP_BACKEND_URL: http://localhost:8080
+    image: joonassoininen/example-frontend
     ports:
       - 5001:5001
   backend:
-    build:
-      context: ../example-app/backend
+    image: joonassoininen/example-backend
     ports:
       - 8080:8080
     environment:
